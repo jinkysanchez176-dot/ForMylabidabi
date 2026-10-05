@@ -1,0 +1,2075 @@
+﻿@page "/"
+@rendermode InteractiveServer
+
+<PageTitle>For My Love ♡</PageTitle>
+
+<div class="love-background">
+
+    <!-- FLOATING HEARTS -->
+    <div class="floating-hearts">
+        <span class="heart-float h1">♡</span>
+        <span class="heart-float h2">♥</span>
+        <span class="heart-float h3">♡</span>
+        <span class="heart-float h4">♥</span>
+        <span class="heart-float h5">♡</span>
+        <span class="heart-float h6">♥</span>
+        <span class="heart-float h7">♡</span>
+        <span class="heart-float h8">♥</span>
+        <span class="heart-float h9">♡</span>
+        <span class="heart-float h10">♥</span>
+    </div>
+
+
+    @if (CurrentPage == 0)
+    {
+        <div class="card">
+
+            <div class="heart">♡</div>
+
+            <h1>For My Love</h1>
+
+            <p>I have a little surprise for you... 🎀</p>
+
+            <p>But first, tell me your name. ♡</p>
+
+            <input @bind="Name" placeholder="Enter your name" />
+
+            <button @onclick="CheckName">
+                Continue ♡
+            </button>
+
+            @if (WrongName)
+            {
+                <p class="wrong">
+                    Hmm... I don't think you're the one I'm looking for. 🥺
+                </p>
+            }
+
+        </div>
+    }
+
+
+    else if (CurrentPage == 1)
+    {
+        <div class="card">
+
+            <div class="heart">♥</div>
+
+            <h1>Happy Monthsary, Love! ❤️</h1>
+
+            <p class="subtitle">
+                Another month with you,
+                another month of memories to keep. ♡
+            </p>
+
+            <div class="message-box">
+
+                <p>
+                    I made something little for you...
+                </p>
+
+                <p>
+                    It's not perfect, but every part of it
+                    was made with you in mind. ❤️
+                </p>
+
+            </div>
+
+            <button @onclick="NextPage">
+                See Our Memories → 📸
+            </button>
+
+        </div>
+    }
+
+
+    else if (CurrentPage == 2)
+    {
+        <div class="card wide">
+
+            <h1>Our Little Memories 📸</h1>
+
+            <p class="subtitle">
+                Some of my favorite moments with you. ❤️
+            </p>
+
+            <div class="music-box">
+                <p><strong>🎵 Our song: ONLY - LEEHI</strong></p>
+
+                <audio controls autoplay loop preload="auto">
+                    <source src="music/ONLY - LEEHI.mp3" type="audio/mpeg" />
+                    Your browser does not support the audio element.
+                </audio>
+
+                <p class="music-note">
+                    If the music does not start automatically, press ▶ Play above. 🎧❤️
+                </p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo1.jpg"
+                         alt="Memory 1"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 1</span>
+                        <span class="empty-text">Add your photo1.jpg here</span>
+                    </div>
+                </div>
+
+                <h2>❤️</h2>
+                <p>
+                    First anniversary nato 🥹🥹🥹
+                    happy kayko ani kay gatuo jud ko katong dipata uyab kay dika sure nako kay gatuo 
+                    jd ko nga maka realize ra nya ka nga laki jud diay imo gusto,
+                     pero naabtan jud yr so yesss so happy hehe love uuu.
+                </p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo2.jpg"
+                         alt="Memory 2"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 2</span>
+                        <span class="empty-text">Add your photo2.jpg here</span>
+                    </div>
+                </div>
+
+                <h2>❤️</h2>
+                <p>
+                    Second anniversary ni nato hehe pero june 6 nani kay sa bday nako or anniv nato 
+                    kay wata nagkakita 🙁 pero happy japon kayko ana love kay bisag late nata naka celeb kay napun an 
+                    jud ang year nag kuyog ta duha. I love youuu love lovee!!
+                </p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo3.jpg"
+                         alt="Memory 3"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 3</span>
+                        <span class="empty-text">Add your photo3.jpg here</span>
+                    </div>
+                </div>
+
+                <h2> ❤️</h2>
+                <p>Ika duha ni na time nga nangaligo tag pool kuyog duha hehehe (ambot oy ngano wanani nagka sunod
+                   ang pics sa ako code nga ako man ta ni gi sunod like unsay first, second etc.😡) I hope ma appreciate japon nimo
+                   hehe iloveyouuuu</p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo4.jpg"
+                         alt="Memory 4"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 4</span>
+                        <span class="empty-text">Add your photo4.jpg here</span>
+                    </div>
+                </div>
+
+                <h2> ❤️</h2>
+                <p>Yesssss 3rd anniversary!!! another yr with my love loveeee hehhee, kana na day kay happy ko na sad, happy 
+                   ko kay 3rd anniversary nato pero sad ko kay ga bday ko nga batig buhok 😡</p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo5.jpg"
+                         alt="Memory 5"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 5</span>
+                        <span class="empty-text">Add your photo5.jpg here</span>
+                    </div>
+                </div>
+
+                <h2> ❤️</h2>
+                <p>And yess kani na time is our 4th anniversary yaaayyy, happy kaayo ko like as in happy kay nakita nako 
+                    love nga na happy raka kung asa tika gidala (yes akoy ga suggest ana nga place🤨) </p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo6.jpg"
+                         alt="Memory 6"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 6</span>
+                        <span class="empty-text">Add your photo6.jpg here</span>
+                    </div>
+                </div>
+
+                <h2> ❤️</h2>
+                <p>Cutieeee hehe usa ni sako ganahan na pic kay cuteee kaayo</p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo7.jpg"
+                         alt="Memory 7"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 7</span>
+                        <span class="empty-text">Add your photo7.jpg here</span>
+                    </div>
+                </div>
+
+                <h2> ❤️</h2>
+                <p>Ayeee gikan skwelahan ba nya nisuds balay ni eunacegail bisag
+                   delikado HAHHAHAHAHAHAH love youuuu</p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo8.jpg"
+                         alt="Memory 8"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 8</span>
+                        <span class="empty-text">Add your photo8.jpg here</span>
+                    </div>
+                </div>
+
+                <h2> ❤️</h2>
+                <p>
+                    Awww prettyyy 🥹💗 kani na time kay birthday nimo and mayta 
+                    happy ka ana and sako gift pud😚💗
+                    
+                </p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo9.jpg"
+                         alt="Memory 9"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 9</span>
+                        <span class="empty-text">Add your photo9.jpg here</span>
+                    </div>
+                </div>
+
+                <h2> ❤️</h2>
+                <p>
+                    Gwapahaaa sa birthday girl oy🥹🥹🥹🥹
+                    
+                </p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo10.jpg"
+                         alt="Memory 10"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 10</span>
+                        <span class="empty-text">Add your photo10.jpg here</span>
+                    </div>
+                </div>
+
+                <h2>❤️</h2>
+                <p>
+                    Wow detdet sa city hall oh HAHHAHAHAHAHHAHA kinuha rana 
+                    nakos akong archive sa story kay sa iphone 7 pana nako na cp😡
+                   
+                </p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo11.jpg"
+                         alt="Memory 11"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 11</span>
+                        <span class="empty-text">Add your photo11.jpg here</span>
+                    </div>
+                </div>
+
+                <h2>❤️</h2>
+                <p>Thank you ni chett sa pag pic ani, nindot unta siga lang kaykog mata😡</p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo12.jpg"
+                         alt="Memory 12"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 12</span>
+                        <span class="empty-text">Add your photo12.jpg here</span>
+                    </div>
+                </div>
+
+                <h2> ❤️</h2>
+                <p>Kani na time kay capping nimo, proud kayko nimo always 🥹💗 Padayun 
+                   future nurse! I’ll always be here cheering for you. I love youuuuuuu!</p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo13.jpg"
+                         alt="Memory 13"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 13</span>
+                        <span class="empty-text">Add your photo13.jpg here</span>
+                    </div>
+                </div>
+
+                <h2>❤️</h2>
+                <p>Wow gwapaha ako tapad oieeee, love kayna nako 👉👈</p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo14.jpg"
+                         alt="Memory 14"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 14</span>
+                        <span class="empty-text">Add your photo14.jpg here</span>
+                    </div>
+                </div>
+
+                <h2> ❤️</h2>
+                <p>Hays thank you chett, may kayka mo pic HAHHAHAHAHAHHAHA
+                   gwapa kay imong miga, bati kaykog nawng 😡 HAHHAAHHAHAHA
+                   ilove you sakong tapad😚</p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo15.jpg"
+                         alt="Memory 15"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 15</span>
+                        <span class="empty-text">Add your photo15.jpg here</span>
+                    </div>
+                </div>
+
+                <h2>❤️</h2>
+                <p>Lagot baya kayko ani na time sus sapot kayko anis nang 
+                   bastos nimo ani, lami kay sila pang sumbagon sus lamia 
+                   jud manumbag og tao ani na time oyyy😡. Nihilak gud ko
+                   anis kalagot pero maygani gwapa kay akong uyab gipakalma ko 😚😝</p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo16.jpg"
+                         alt="Memory 16"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 16</span>
+                        <span class="empty-text">Add your photo16.jpg here</span>
+                    </div>
+                </div>
+
+                <h2> ❤️</h2>
+                <p>
+                    HAHAHAHAHAHHAHAHAAH ka cute ani oie parehas pajud og color sa sanina.
+                    Makalagot lang kay kana na time dika ganahan nako kay sige radaw kog
+                    ngisi edi okay, sakit sad ah nya ngano ibog ibog man ka 🙄
+                </p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo17.jpg"
+                         alt="Memory 17"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 17</span>
+                        <span class="empty-text">Add your photo17.jpg here</span>
+                    </div>
+                </div>
+
+                <h2> ❤️</h2>
+                <p>Cuteee kayni hehe ganahan ko anii. Iloveyouuuuuuuu</p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo18.jpg"
+                         alt="Memory 18"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 18</span>
+                        <span class="empty-text">Add your photo18.jpg here</span>
+                    </div>
+                </div>
+
+                <h2> ❤️</h2>
+                <p>Kani kay 47th monthsary ni nato, suki sa eight cafe HAHHAHAHAHHAHAHAHA</p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo19.jpg"
+                         alt="Memory 19"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 19</span>
+                        <span class="empty-text">Add your photo19.jpg here</span>
+                    </div>
+                </div>
+
+                <h2> ❤️</h2>
+                <p>Wow heart2 man oiee diraman ilhan nga eunace mananghid 
+                   research (SHS paka ana na time) HAHHAHAHHAHAHAHA</p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo20.jpg"
+                         alt="Memory 20"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 20</span>
+                        <span class="empty-text">Add your photo20.jpg here</span>
+                    </div>
+                </div>
+
+                <h2>❤️</h2>
+                <p>Ganahan kayko mag tan aw ani, cutee kaayo 🥹🥹🥹 
+                   mas gi kuptan paka sako mama, kinsa kahay tinuod
+                   anak sa ikaw guro🙄</p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo21.jpg"
+                         alt="Memory 21"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 21</span>
+                        <span class="empty-text">Add your photo21.jpg here</span>
+                    </div>
+                </div>
+
+                <h2>❤️</h2>
+                <p>
+                    HAHAHAHAHHAHAHAHHAHA second pic ni nato love
+                    kay ato first pic wala naman ko kato nag lakaw 
+                    ta gikan ch padung sa atoa ba hehehe dipata uyab ana😭
+                </p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo22.jpg"
+                         alt="Memory 22"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 22</span>
+                        <span class="empty-text">Add your photo22.jpg here</span>
+                    </div>
+                </div>
+
+                <h2>❤️</h2>
+                <p>Kani ay sig adto gaisano after klase HAHAHHAHAHHAHA 
+                    moana gud ma’am jian nako nga gaisano lovers daw ta😭</p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo23.jpg"
+                         alt="Memory 23"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 23</span>
+                        <span class="empty-text">Add your photo23.jpg here</span>
+                    </div>
+                </div>
+
+                <h2> ❤️</h2>
+                <p>Gwapahaa sako uyab 🥹🥹🥹💗💗💗😍😍😍😍</p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo24.jpg"
+                         alt="Memory 24"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 24</span>
+                        <span class="empty-text">Add your photo24.jpg here</span>
+                    </div>
+                </div>
+
+                <h2> ❤️</h2>
+                <p>
+                    Kani mas better ni chett kay medj gwapo 
+                    ko gamay ari HAHAHHAHAHHAHAHA ako tapad
+                    jud oy gwapaaaaa 🥺🥺🥺
+                </p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo25.jpg"
+                         alt="Memory 25"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 25</span>
+                        <span class="empty-text">Add your photo25.jpg here</span>
+                    </div>
+                </div>
+
+                <h2> ❤️</h2>
+                <p>The day you said yes, and I got to call you mine🥹💗</p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo26.jpg"
+                         alt="Memory 26"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 26</span>
+                        <span class="empty-text">Add your photo26.jpg here</span>
+                    </div>
+                </div>
+
+                <h2> ❤️</h2>
+                <p>Wahhhh pretty kay ako ka dateeeee helpppp☹️💗💗💗💗</p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo27.jpg"
+                         alt="Memory 27"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 27</span>
+                        <span class="empty-text">Add your photo27.jpg here</span>
+                    </div>
+                </div>
+
+                <h2> ❤️</h2>
+                <p>After ni sa new year, nanglaag ta ani sa IT park 
+                    nya giuwan😡. Wala kaayo ta ka pic pic ani sa 
+                    huhu gelang soon balik ta ha hehe, Iloveyouuuuu.</p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo28.jpg"
+                         alt="Memory 28"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 28</span>
+                        <span class="empty-text">Add your photo28.jpg here</span>
+                    </div>
+                </div>
+
+                <h2>❤️</h2>
+                <p>HAHAHAHAHAHAHAHA si austinnn😭😭😭😭. Paila man
+                   ka ani love nga sige rakag kapyot nako, da diman 
+                   kabaw molangoy HAHHAAHAHHAHAHA maygani kabaw ko 😝</p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo29.jpg"
+                         alt="Memory 29"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 29</span>
+                        <span class="empty-text">Add your photo29.jpg here</span>
+                    </div>
+                </div>
+
+                <h2> ❤️</h2>
+                <p>Matchy2 baya ta ani pg pajama heheh dilang makita
+                   sa pic kay naka crop😡</p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo30.jpg"
+                         alt="Memory 30"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 30</span>
+                        <span class="empty-text">Add your photo30.jpg here</span>
+                    </div>
+                </div>
+
+                <h2> ❤️</h2>
+                <p>Ka pretty ako asawa 🥺💗</p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo31.jpg"
+                         alt="Memory 31"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 31</span>
+                        <span class="empty-text">Add your photo31.jpg here</span>
+                    </div>
+                </div>
+
+                <h2>❤️</h2>
+                <p>Monthsary ni nato nya nag tuslob buwa ta 
+                   ani na time HAHAHAHAHHAHAHHAHA</p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo32.jpg"
+                         alt="Memory 32"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 32</span>
+                        <span class="empty-text">Add your photo32.jpg here</span>
+                    </div>
+                </div>
+
+                <h2> ❤️</h2>
+                <p>Kani na time kay naa man ka drawingon 
+                   nya ako kay study HAHHAHAHAHAHAAHHA 
+                   suki juds eight cafe. Kuyawan baya ko 
+                   ani da kay gatuo kog kuwang ako money, 
+                   maygani kay na sakto ra pero wanako pam 
+                   plete pag uli HAHHAHAHAHHAHA</p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo33.jpg"
+                         alt="Memory 33"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 33</span>
+                        <span class="empty-text">Add your photo33.jpg here</span>
+                    </div>
+                </div>
+
+                <h2></h2>
+                <p>New year ni sya na time. Gikan ta ani sa
+                    babaw sa nag kuan fireworks hehe mayta
+                    ing ana every new yr🥺</p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo34.jpg"
+                         alt="Memory 34"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 34</span>
+                        <span class="empty-text">Add your photo34.jpg here</span>
+                    </div>
+                </div>
+
+                <h2> ❤️</h2>
+                <p>Gwapahaaaa sakong asawa na nurseeee 😍💗.
+                   Moana sad ni sya ron “batia ana love oy”. 
+                   Ayg tan aw kung dika ganahan😡 nindot ana 
+                   ako baya ga pic 🙄</p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo35.jpg"
+                         alt="Memory 35"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 35</span>
+                        <span class="empty-text">Add your photo35.jpg here</span>
+                    </div>
+                </div>
+
+                <h2>❤️</h2>
+                <p>HAHHAHAHHAHAHAHAHAHHA ako gi huna huna si
+                   riyo ani nga siomai😭</p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo36.jpg"
+                         alt="Memory 36"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 36</span>
+                        <span class="empty-text">Add your photo36.jpg here</span>
+                    </div>
+                </div>
+
+                <h2>❤️</h2>
+                <p>Waaaaahhhh pretty kay akong love love 😩💗</p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo37.jpg"
+                         alt="Memory 37"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 37</span>
+                        <span class="empty-text">Add your photo37.jpg here</span>
+                    </div>
+                </div>
+
+                <h2> ❤️</h2>
+                <p>Wow dungan man uli gikan school oieee HAHAHAHHAHAHAHHA </p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo38.jpg"
+                         alt="Memory 38"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 38</span>
+                        <span class="empty-text">Add your photo38.jpg here</span>
+                    </div>
+                </div>
+
+                <h2> ❤️</h2>
+                <p>Yayay pa ako love love ari, napaka shotgun 
+                   ani love HAHAHHAHAHAHHAHA. Iloveyouuu</p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo39.jpg"
+                         alt="Memory 39"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 39</span>
+                        <span class="empty-text">Add your photo39.jpg here</span>
+                    </div>
+                </div>
+
+                <h2> ❤️</h2>
+                <p>Cutieeee, ngisi2 lang na pero puros nata nanguyawan
+                   ana HAHHAHAHAHAHAHHAHAHAHA</p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo40.jpg"
+                         alt="Memory 40"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 40</span>
+                        <span class="empty-text">Add your photo40.jpg here</span>
+                    </div>
+                </div>
+
+                <h2> ❤️</h2>
+                <p>Niceee kayni na picccc hehehe ganahan kayko ani.
+                    Thank youuu shettt.</p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo41.jpg"
+                         alt="Memory 41"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 41</span>
+                        <span class="empty-text">Add your photo41.jpg here</span>
+                    </div>
+                </div>
+
+                <h2> ❤️</h2>
+                <p>Cutieeeee ganahan ko ani love💗</p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo42.jpg"
+                         alt="Memory 42"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 42</span>
+                        <span class="empty-text">Add your photo42.jpg here</span>
+                    </div>
+                </div>
+
+                <h2>❤️</h2>
+                <p>Before anniversary mani nato, nag 
+                   buy rata sisig ani then niadto sa 
+                   cansojong nya adto ta nangaon. After 
+                   kaon kay niadto ta sa dagat nya ga pic2.</p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo43.jpg"
+                         alt="Memory 43"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 43</span>
+                        <span class="empty-text">Add your photo43.jpg here</span>
+                    </div>
+                </div>
+
+                <h2>❤️</h2>
+                <p>Lah oieee, gikan skwelahan ba nikuyog 
+                   jud sako awarding HAHHAHAHAHAHAHHAAH 
+                   thank you love loveeee sa pag kuyog, 
+                   if nalimot ka kato ning na 2nd ba to
+                   or 3rd sa 8 balls billiard pag division.</p>
+            </div>
+
+            <div class="memory">
+                <div class="memory-photo-slot">
+                    <img src="images/photo44.jpg"
+                         alt="Memory 44"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="empty-photo">
+                        <span class="empty-number">📸 PHOTO 44</span>
+                        <span class="empty-text">Add your photo44.jpg here</span>
+                    </div>
+                </div>
+
+                <h2>❤️</h2>
+                <p>Wow first time mani nato nag cine duha sa
+                    HAHHAHAHAHAHAAHHA. Iloveyouuuuuu love love,
+                    happy monthsaryyy love kaayo tikaaaa💗</p>
+            </div>
+
+            <button @onclick="NextPage">
+                There's More... ♡
+            </button>
+
+        </div>
+    }
+
+    else if (CurrentPage == 3)
+    {
+        <div class="card wide">
+
+            <div class="heart">🩷</div>
+
+            <h1>Things I Know About You</h1>
+
+            <p class="subtitle">
+                Little things about you (Naa pana daghan ha pero kani ra ako gi butang hehe). ♡
+            </p>
+
+            <div class="thing">
+
+                <h2>🩷 You love pink</h2>
+
+                <p>
+                    I know how much you love pink.
+                    So whenever I see something pink,
+                    ikaw dayon akong mahuna-hunaan hehe love you. 🥹
+                </p>
+
+            </div>
+
+            <div class="thing">
+
+                <h2>🍝 You love carbonara</h2>
+
+                <p>
+                    I know you love eating carbonara,
+                    if mangadto tag like cafe, carbonara dayun imong pangitaon HAHAHA. 🤭❤️
+                </p>
+
+            </div>
+
+            <div class="thing">
+
+                <h2>🍪 You love Biscoff</h2>
+
+                <p>
+                    And of course, your love for Biscoff.
+                    Small thing ra siya, but I remember it
+                    because I like remembering the things you love. 🥹
+                </p>
+
+            </div>
+
+            <div class="thing">
+
+                <h2>🌷 You love receiving flowers</h2>
+
+                <p>
+                    I know how happy you are whenever you receive flowers.
+                    So if I could, I'd give you flowers
+                    every time just to see you smile. 🌷❤️
+                </p>
+
+            </div>
+
+            <div class="thing">
+
+                <h2>🥹 You love being taken care of</h2>
+
+                <p>
+                    And I know you love being cared for.
+                    I love taking care of you in my own little ways
+                    because you deserve to feel loved and cared for. 🩷
+                </p>
+
+            </div>
+
+            <button @onclick="NextPage">
+                Next... 💌
+            </button>
+
+        </div>
+    }
+
+
+    else if (CurrentPage == 4)
+    {
+        <div class="card">
+
+            <div class="heart">💌</div>
+
+            <h1>A Letter For You</h1>
+
+            <div class="letter">
+
+                <p>Dear Love,</p>
+
+                <p>
+                    Happy 58th monthsary to us, Love. ❤️
+                </p>
+
+                <p>
+                    I know that before we reached this point, we went through a lot of challenges,
+                    and there were times when we tried to break up. But, we still choose each other,
+                    because we both love each other, and I want you to know that bisag kapila paka mag minaldita nako HAHAHA,
+                    Love kaayo tika ha? I hope that even if we reach a point where we feel like things are getting too
+                    difficult and it seems like it’s not working anymore, you will still choose me and still stay with me :((
+                </p>
+
+                <p>
+                    I know we’re not perfect and we still have a lot of things to learn and understand about each other,
+                    but I’m really thankful that through everything, we’re still here. I want to keep making memories with you,
+                    laugh with you, annoy you, and love you even on the days when things aren’t easy. I hope we get to celebrate
+                    many more monthsaries or anniversaries together, until we can look back at everything we’ve been through and say,
+                    “Grabe, nalampasan ra gyud nato tanan.” HAHAHA. I love you so much, Love, and I’ll always be grateful that it’s you. ❤️
+                </p>
+
+                <p>
+                    Happy Monthsary, my love.
+                </p>
+
+                <p>
+                    Always yours, ♡
+                </p>
+
+            </div>
+
+            <button @onclick="NextPage">
+                Continue... 🥺
+            </button>
+
+        </div>
+    }
+
+
+    else if (CurrentPage == 5)
+    {
+        <div class="card question-card">
+
+            <div class="heart">❤️</div>
+
+            <h1>Would You Choose Me Again?</h1>
+
+            <p class="question">
+                After everything we've been through...
+            </p>
+
+            <p class="question">
+
+                <strong>
+                    Would you choose me again? 🥺
+                </strong>
+
+            </p>
+
+            <div class="buttons">
+
+                <button class="yes"
+                        @onclick="ChooseYes">
+
+                    YES, ALWAYS ❤️
+
+                </button>
+
+                <button class="no"
+                        style="@NoStyle"
+                        @onmouseover="MoveNo"
+                        @onclick="MoveNo">
+
+                    No(ayaw kog pislita pls)😭
+
+                </button>
+
+            </div>
+
+            @if (NoClicks > 0)
+            {
+                <p class="funny">
+                    Ayaw pag No ba 😭❤️
+                </p>
+            }
+
+        </div>
+    }
+
+
+    else if (CurrentPage == 6)
+    {
+        <div class="card">
+
+            <div class="heart">❤️</div>
+
+            <h1>If I Could Choose Again...</h1>
+
+            <div class="final-text">
+
+                <p>
+                    I would still choose you.
+                </p>
+
+                <p class="big">
+                    Again.
+                </p>
+
+                <p class="big">
+                    And again.
+                </p>
+
+                <p class="big">
+                    And again. ❤️
+                </p>
+
+                <p>
+                    Thank you for being part of my life
+                    and for all the memories we've made together.
+                </p>
+
+                <p>
+                    Happy Monthsary, my love. 🥹❤️
+                </p>
+
+            </div>
+
+            <button @onclick="NextPage">
+                Wait... there's more 👀 →
+            </button>
+
+        </div>
+    }
+
+
+    else if (CurrentPage == 7)
+    {
+        <div class="card">
+
+            <div class="heart">💌</div>
+
+            <h1>One More Thing...</h1>
+
+            <div class="final-text">
+
+                <p>
+                    Before this ends,
+                    I just want you to know...
+                </p>
+
+                <p class="big">
+                    Thank you for choosing me. ❤️
+                </p>
+
+                <p>
+                    Thank you for every memory,
+                    every laugh,
+                    every moment,
+                    and everything we've shared.
+                </p>
+
+            </div>
+
+            <button @onclick="NextPage">
+                Open this → 🥺
+            </button>
+
+        </div>
+    }
+
+
+    else if (CurrentPage == 8)
+    {
+        <div class="card">
+
+            <div class="heart">🥹❤️</div>
+
+            <h1>If I Could Go Back...</h1>
+
+            <div class="final-text">
+
+                <p>
+                    If I could go back to the beginning,
+                    knowing everything we've been through...
+                </p>
+
+                <p>
+                    The happy moments,
+                    the difficult ones,
+                    the laughs,
+                    the arguments,
+                    and all the memories...
+                </p>
+
+                <p class="big">
+                    I'd still choose you.
+                </p>
+
+                <p class="big">
+                    Every single time. ❤️
+                </p>
+
+            </div>
+
+            <button @onclick="NextPage">
+                P.S. There's one more thing... 👀
+            </button>
+
+        </div>
+    }
+
+
+    else if (CurrentPage == 9)
+    {
+        <div class="card">
+
+            <div class="heart">🌷</div>
+
+            <h1>For You, Love 🌷</h1>
+
+            <p class="subtitle">
+                You thought that was the last one? 👀
+            </p>
+
+            <p class="subtitle">
+                There's one last little surprise...
+            </p>
+
+            <button @onclick="NextPage">
+                Click Me 🌷
+            </button>
+
+        </div>
+    }
+
+
+    else
+    {
+        <!-- FINAL BOUQUET PAGE -->
+
+        <div class="final-page">
+
+            <div class="hearts-top">
+                ♡ ❤️ ♡ 🩷 ♡
+            </div>
+
+            <!-- PINK BOUQUET -->
+
+            <div class="bouquet">
+
+                <div class="flowers">
+
+                    <div class="rose rose1">
+                        <span></span>
+                    </div>
+
+                    <div class="rose rose2">
+                        <span></span>
+                    </div>
+
+                    <div class="rose rose3">
+                        <span></span>
+                    </div>
+
+                    <div class="rose rose4">
+                        <span></span>
+                    </div>
+
+                    <div class="rose rose5">
+                        <span></span>
+                    </div>
+
+                </div>
+
+                <div class="small-flower sf1">✿</div>
+                <div class="small-flower sf2">✿</div>
+                <div class="small-flower sf3">✿</div>
+
+                <div class="greenery g1"></div>
+                <div class="greenery g2"></div>
+                <div class="greenery g3"></div>
+
+                <div class="wrapper"></div>
+
+                <div class="ribbon"></div>
+
+                <div class="ribbon-tail left-tail"></div>
+                <div class="ribbon-tail right-tail"></div>
+
+            </div>
+
+
+            <div class="card final-card">
+
+                <h1>
+                    For You, Love. 🌷
+                </h1>
+
+                <div class="final-text">
+
+                    <p>
+                        If I could give you a flower
+                        for every moment you've made me happy,
+                    </p>
+
+                    <p class="big">
+                        I'd probably need an entire garden. 🥹❤️
+                    </p>
+
+                    <p>
+                        Thank you for being part of my life.
+                    </p>
+
+                    <p class="big">
+                        I Love You, Love. ❤️
+                    </p>
+
+                    <p>
+                        Happy Monthsary. 🌷
+                    </p>
+
+                </div>
+
+                <div class="last-photo">
+                    <img src="images/favorite.jpg"
+                         alt="Our Favorite Photo"
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+
+                    <div class="favorite-empty">
+                        📷
+                        <br />
+                        Add favorite.jpg here ❤️
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    }
+
+</div>
+
+
+<style>
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+    }
+
+
+    /* BACKGROUND */
+
+    .love-background {
+        min-height: 100vh;
+        background: radial-gradient( circle at 15% 15%, rgba(255,255,255,0.8) 0 6px, transparent 7px ), radial-gradient( circle at 85% 25%, rgba(255,255,255,0.7) 0 8px, transparent 9px ), linear-gradient( 135deg, #ffd6e7, #ffc1da, #ffe6f0 );
+        padding: 60px 20px;
+        font-family: Arial, sans-serif;
+        overflow: hidden;
+        position: relative;
+    }
+
+
+    /* FLOATING HEARTS */
+
+    .floating-hearts {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .heart-float {
+        position: absolute;
+        color: #f36b9d;
+        font-size: 25px;
+        opacity: 0.75;
+        animation: floatHeart 7s linear infinite;
+    }
+
+    .h1 {
+        left: 8%;
+        bottom: -50px;
+        animation-delay: 0s;
+        font-size: 28px;
+    }
+
+    .h2 {
+        left: 20%;
+        bottom: -60px;
+        animation-delay: 2s;
+        font-size: 20px;
+    }
+
+    .h3 {
+        left: 32%;
+        bottom: -40px;
+        animation-delay: 4s;
+        font-size: 30px;
+    }
+
+    .h4 {
+        left: 45%;
+        bottom: -70px;
+        animation-delay: 1s;
+        font-size: 18px;
+    }
+
+    .h5 {
+        left: 57%;
+        bottom: -50px;
+        animation-delay: 3s;
+        font-size: 27px;
+    }
+
+    .h6 {
+        left: 68%;
+        bottom: -60px;
+        animation-delay: 5s;
+        font-size: 22px;
+    }
+
+    .h7 {
+        left: 77%;
+        bottom: -40px;
+        animation-delay: 2.5s;
+        font-size: 32px;
+    }
+
+    .h8 {
+        left: 88%;
+        bottom: -60px;
+        animation-delay: 4.5s;
+        font-size: 20px;
+    }
+
+    .h9 {
+        left: 15%;
+        bottom: -80px;
+        animation-delay: 6s;
+        font-size: 18px;
+    }
+
+    .h10 {
+        left: 92%;
+        bottom: -80px;
+        animation-delay: 1.5s;
+        font-size: 28px;
+    }
+
+
+    /* CARD */
+
+    .card {
+        position: relative;
+        z-index: 5;
+        max-width: 700px;
+        margin: auto;
+        padding: 45px 30px;
+        background: rgba(255,255,255,0.82);
+        border-radius: 30px;
+        border: 2px solid rgba(255,255,255,0.9);
+        box-shadow: 0 15px 40px rgba(180,60,110,0.18);
+        text-align: center;
+    }
+
+    .wide {
+        max-width: 850px;
+    }
+
+
+    /* TEXT */
+
+    .heart {
+        font-size: 75px;
+        animation: beat 1.5s infinite;
+    }
+
+    h1 {
+        color: #c72f69;
+        font-size: 40px;
+        margin: 20px 0;
+    }
+
+    h2 {
+        color: #d34d7c;
+    }
+
+    p {
+        color: #684052;
+        line-height: 1.7;
+    }
+
+    .subtitle {
+        font-size: 20px;
+    }
+
+
+    /* INPUT */
+
+    input {
+        display: block;
+        width: 270px;
+        margin: 25px auto 15px;
+        padding: 14px;
+        border-radius: 25px;
+        border: 2px solid #ef9fbd;
+        text-align: center;
+        font-size: 16px;
+        outline: none;
+    }
+
+
+    /* BUTTON */
+
+    button {
+        border: none;
+        border-radius: 30px;
+        padding: 14px 28px;
+        margin-top: 18px;
+        background: #e85b91;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 7px 15px rgba(210,70,120,0.25);
+        transition: 0.2s;
+    }
+
+        button:hover {
+            background: #d9437c;
+            transform: scale(1.05);
+        }
+
+
+    .wrong {
+        color: #d34d6e;
+        margin-top: 20px;
+    }
+
+
+    /* MESSAGE */
+
+    .message-box {
+        max-width: 500px;
+        margin: 30px auto;
+        padding: 25px;
+        border-radius: 20px;
+        background: #ffe8f1;
+    }
+
+
+    /* MEMORIES */
+
+    .memory {
+        max-width: 550px;
+        margin: 35px auto;
+        padding: 22px;
+        background: white;
+        border-radius: 25px;
+        box-shadow: 0 7px 20px rgba(180,70,110,0.12);
+    }
+
+    .photo {
+        height: 280px;
+        border: 2px dashed #e98aac;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background: #fff2f7;
+        color: #d75d89;
+        font-size: 22px;
+    }
+
+
+    /* 44 PHOTO MEMORIES */
+
+    .memory-photo-slot {
+        width: 100%;
+        height: 280px;
+        border: 2px dashed #e98aac;
+        border-radius: 20px;
+        overflow: hidden;
+        background: #fff2f7;
+        position: relative;
+    }
+
+        .memory-photo-slot img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+    .empty-photo {
+        width: 100%;
+        height: 100%;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: #d75d89;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .empty-number {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    .empty-text {
+        font-size: 16px;
+    }
+
+    .music-box {
+        max-width: 550px;
+        margin: 25px auto 35px;
+        padding: 20px;
+        border-radius: 20px;
+        background: #ffe8f1;
+    }
+
+        .music-box audio {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+    .music-note {
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+    /* THINGS */
+
+    .thing {
+        max-width: 550px;
+        margin: 20px auto;
+        padding: 25px;
+        border-radius: 25px;
+        background: white;
+        box-shadow: 0 7px 20px rgba(180,70,110,0.12);
+    }
+
+
+    /* LETTER */
+
+    .letter {
+        max-width: 600px;
+        margin: 30px auto;
+        padding: 35px;
+        background: white;
+        border-radius: 25px;
+        text-align: left;
+        line-height: 1.8;
+        box-shadow: 0 7px 20px rgba(180,70,110,0.12);
+    }
+
+
+    /* QUESTION */
+
+    .question {
+        font-size: 22px;
+    }
+
+    .question-card {
+        min-height: 600px;
+    }
+
+    .buttons {
+        position: relative;
+        height: 300px;
+        margin-top: 30px;
+    }
+
+    .yes {
+        position: absolute;
+        left: 35%;
+        top: 50px;
+    }
+
+    .no {
+        position: absolute;
+        left: 60%;
+        top: 50px;
+        transition: all 0.15s ease;
+    }
+
+    .funny {
+        color: #d34d7c;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+
+    /* FINAL TEXT */
+
+    .final-text {
+        max-width: 600px;
+        margin: 30px auto;
+        font-size: 18px;
+        line-height: 1.9;
+    }
+
+    .big {
+        font-size: 28px;
+        font-weight: bold;
+        color: #c72f69;
+    }
+
+
+    /* FINAL PAGE */
+
+    .final-page {
+        position: relative;
+        z-index: 5;
+        text-align: center;
+        max-width: 900px;
+        margin: auto;
+    }
+
+    .hearts-top {
+        font-size: 35px;
+        color: #e85b91;
+        margin-bottom: 15px;
+    }
+
+
+    /* PINK BOUQUET */
+
+    .bouquet {
+        position: relative;
+        width: 360px;
+        height: 390px;
+        margin: 10px auto -30px;
+    }
+
+
+    /* ROSES */
+
+    .flowers {
+        position: absolute;
+        width: 100%;
+        height: 230px;
+        top: 10px;
+        z-index: 5;
+    }
+
+    .rose {
+        position: absolute;
+        width: 85px;
+        height: 85px;
+        border-radius: 50%;
+        background: radial-gradient( circle at center, #f7a2c2 10%, #f276a8 30%, #ec5d96 60%, #e94a89 100% );
+        box-shadow: 0 5px 15px rgba(200,70,120,0.25);
+    }
+
+        .rose::before,
+        .rose::after {
+            content: "";
+            position: absolute;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: #f78eb5;
+            top: 15px;
+            left: 15px;
+        }
+
+        .rose::after {
+            width: 35px;
+            height: 35px;
+            top: 25px;
+            left: 25px;
+            background: #f8b0cc;
+        }
+
+        .rose span {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: #ed5d98;
+            left: 35px;
+            top: 35px;
+            z-index: 4;
+        }
+
+    .rose1 {
+        left: 135px;
+        top: 5px;
+        width: 95px;
+        height: 95px;
+    }
+
+    .rose2 {
+        left: 55px;
+        top: 65px;
+    }
+
+    .rose3 {
+        right: 55px;
+        top: 65px;
+    }
+
+    .rose4 {
+        left: 105px;
+        top: 105px;
+        width: 75px;
+        height: 75px;
+    }
+
+    .rose5 {
+        right: 105px;
+        top: 105px;
+        width: 75px;
+        height: 75px;
+    }
+
+
+    /* SMALL WHITE FLOWERS */
+
+    .small-flower {
+        position: absolute;
+        z-index: 8;
+        color: white;
+        font-size: 32px;
+        text-shadow: 0 2px 4px rgba(190,70,120,0.25);
+    }
+
+    .sf1 {
+        left: 80px;
+        top: 30px;
+    }
+
+    .sf2 {
+        right: 75px;
+        top: 45px;
+    }
+
+    .sf3 {
+        left: 155px;
+        top: 125px;
+        font-size: 25px;
+    }
+
+
+    /* GREENERY */
+
+    .greenery {
+        position: absolute;
+        width: 95px;
+        height: 25px;
+        background: #82b879;
+        border-radius: 100% 0 100% 0;
+        z-index: 2;
+    }
+
+    .g1 {
+        left: 45px;
+        top: 165px;
+        transform: rotate(-35deg);
+    }
+
+    .g2 {
+        right: 45px;
+        top: 165px;
+        transform: rotate(35deg) scaleX(-1);
+    }
+
+    .g3 {
+        left: 130px;
+        top: 190px;
+        transform: rotate(-5deg);
+    }
+
+
+    /* WRAPPER */
+
+    .wrapper {
+        position: absolute;
+        left: 65px;
+        top: 170px;
+        width: 230px;
+        height: 170px;
+        background: linear-gradient( 135deg, rgba(255,190,215,0.95), rgba(255,225,238,0.9) );
+        clip-path: polygon(8% 0, 92% 0, 100% 100%, 0 100%);
+        z-index: 10;
+        opacity: 0.92;
+    }
+
+
+    /* RIBBON */
+
+    .ribbon {
+        position: absolute;
+        width: 55px;
+        height: 55px;
+        background: #f05d98;
+        border-radius: 50%;
+        left: 152px;
+        top: 285px;
+        z-index: 15;
+    }
+
+        .ribbon::before,
+        .ribbon::after {
+            content: "";
+            position: absolute;
+            width: 75px;
+            height: 45px;
+            background: #f26da3;
+            top: 5px;
+        }
+
+        .ribbon::before {
+            right: 35px;
+            border-radius: 100% 0 100% 0;
+            transform: rotate(-25deg);
+        }
+
+        .ribbon::after {
+            left: 35px;
+            border-radius: 0 100% 0 100%;
+            transform: rotate(25deg);
+        }
+
+
+    /* RIBBON TAILS */
+
+    .ribbon-tail {
+        position: absolute;
+        width: 55px;
+        height: 100px;
+        background: #f06a9e;
+        top: 310px;
+        z-index: 12;
+    }
+
+    .left-tail {
+        left: 120px;
+        transform: rotate(15deg);
+        clip-path: polygon( 0 0, 100% 0, 70% 100%, 35% 75% );
+    }
+
+    .right-tail {
+        right: 120px;
+        transform: rotate(-15deg);
+        clip-path: polygon( 0 0, 100% 0, 65% 75%, 30% 100% );
+    }
+
+
+    /* PHOTO */
+
+    .last-photo {
+        max-width: 450px;
+        height: 300px;
+        margin: 30px auto;
+        border: 2px dashed #e98aac;
+        border-radius: 25px;
+        background: #fff2f7;
+        overflow: hidden;
+        position: relative;
+    }
+
+        .last-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+    .favorite-empty {
+        width: 100%;
+        height: 100%;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: #d75d89;
+        font-size: 20px;
+        text-align: center;
+    }
+
+
+    /* ANIMATIONS */
+
+    @@keyframes beat {
+
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.08);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+
+    @@keyframes floatHeart {
+
+        0% {
+            transform: translateY(0) rotate(0deg);
+            opacity: 0;
+        }
+
+        10% {
+            opacity: 0.8;
+        }
+
+        50% {
+            transform: translateY(-50vh) rotate(15deg);
+            opacity: 0.9;
+        }
+
+        100% {
+            transform: translateY(-110vh) rotate(-15deg);
+            opacity: 0;
+        }
+    }
+
+
+    /* MOBILE */
+
+    @@media (max-width: 600px) {
+
+        .love-background {
+            padding: 30px 15px;
+        }
+
+        .card {
+            padding: 35px 20px;
+        }
+
+        h1 {
+            font-size: 30px;
+        }
+
+        .subtitle {
+            font-size: 17px;
+        }
+
+        .photo {
+            height: 230px;
+        }
+
+        .yes {
+            left: 25%;
+        }
+
+        .no {
+            left: 55%;
+        }
+
+        .bouquet {
+            transform: scale(0.8);
+            margin-top: -20px;
+            margin-bottom: -60px;
+        }
+
+        .floating-hearts .heart-float {
+            font-size: 20px;
+        }
+    }
+</style>
+
+
+@code
+{
+    private string Name = "";
+
+    private bool WrongName = false;
+
+    private int CurrentPage = 0;
+
+    private int NoClicks = 0;
+
+    private string NoStyle = "left: 60%; top: 50px;";
+
+    private Random random = new Random();
+
+
+    private void CheckName()
+    {
+        if (Name.Trim().Equals(
+            "Eunacegail",
+            StringComparison.OrdinalIgnoreCase))
+        {
+            WrongName = false;
+
+            CurrentPage = 1;
+        }
+        else
+        {
+            WrongName = true;
+        }
+    }
+
+
+    private void NextPage()
+    {
+        CurrentPage++;
+    }
+
+
+    private void ChooseYes()
+    {
+        CurrentPage = 6;
+    }
+
+
+    private void MoveNo()
+    {
+        NoClicks++;
+
+        int left = random.Next(5, 80);
+
+        int top = random.Next(5, 80);
+
+        NoStyle =
+            $"left: {left}%; top: {top}%;";
+    }
+}
